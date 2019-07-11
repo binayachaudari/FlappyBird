@@ -84,7 +84,6 @@ let pipeCollisionDetection = (pipeObject) => {
       birdInstance.y < pipeObject.y + pipeObject.pipeHeight + BIRD_PASS_GAP + pipeObject.pipeHeight &&
       birdInstance.y + singleSpriteHeight > pipeObject.y + pipeObject.pipeHeight + BIRD_PASS_GAP)) {
     collisionSound.play();
-
     gameStop();
   }
 }
@@ -124,7 +123,6 @@ let updateScore = (pipeObject) => {
 let gameStop = () => {
   clearInterval(generatePipeInterval);
   window.cancelAnimationFrame(gameInit);
-  init();
   document.onkeypress = (e) => {
     if (e.keyCode == 32) {
       wingSound.pause();
