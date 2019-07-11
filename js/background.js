@@ -2,7 +2,7 @@
 let backgroundImage = new Image(),
   backgroundGround = new Image();
 
-let offset = 0;
+let offset;
 backgroundImage.src = './images/background.png';
 backgroundGround.src = './images/ground.png';
 
@@ -11,7 +11,7 @@ let backgroundDraw = () => {
   ctx.drawImage(backgroundImage, 0, 0, CANVAS_WIDTH, CANVAS_HEIGHT - backgroundGround.height);
   ctx.save();
 
-  let ground = ctx.createPattern(backgroundGround, 'repeat');
+  let ground = ctx.createPattern(backgroundGround, 'repeat-x');
   ctx.fillStyle = ground;
   ctx.translate(-offset, CANVAS_HEIGHT - backgroundGround.height);
   ctx.fillRect(0, 0, CANVAS_WIDTH + GROUND_OFFSET, backgroundGround.height);
