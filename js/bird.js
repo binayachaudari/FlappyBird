@@ -6,7 +6,7 @@ class Bird {
     this.dx = 0;
     this.dy = 0;
     this.index = 0;
-    this.velocity = 0;
+    this.velocity = bird.velocity;
     setInterval(() => {
       this.index++;
       if (this.index >= 8) {
@@ -17,7 +17,6 @@ class Bird {
 
   draw() {
     ctx.beginPath();
-    ctx.fillStyle = "red";
     ctx.drawImage(birdAnimation, 0, this.index * singleSpriteHeight, spriteWidth, singleSpriteHeight, this.x, this.y, spriteWidth, singleSpriteHeight);
   }
 
@@ -26,7 +25,6 @@ class Bird {
     this.y += this.velocity;
   }
 }
-
 
 let spriteWidth,
   spriteHeight,

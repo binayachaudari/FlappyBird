@@ -1,9 +1,8 @@
-
 let backgroundImage = new Image(),
   backgroundGround = new Image();
 
 let offset;
-backgroundImage.src = './images/background.png';
+
 backgroundGround.src = './images/ground.png';
 
 let backgroundDraw = () => {
