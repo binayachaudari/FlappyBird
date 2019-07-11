@@ -197,8 +197,8 @@ let gameOverCanvas = () => {
   ctx.drawImage(scoreBoardImage, CANVAS_WIDTH / 2 - scoreBoardImage.width / 2, CANVAS_HEIGHT / 2 - scoreBoardImage.height / 2 - 100);
   ctx.strokeText(`${score}`, CANVAS_WIDTH / 2, 265);
   ctx.fillText(`${score}`, CANVAS_WIDTH / 2, 265);
-  ctx.strokeText(`${localStorage.getItem('flappyHighScore')}`, CANVAS_WIDTH / 2, 350);
-  ctx.fillText(`${localStorage.getItem('flappyHighScore')}`, CANVAS_WIDTH / 2, 350);
+  ctx.strokeText(`${localStorage.getItem('flappyHighScore') || 0}`, CANVAS_WIDTH / 2, 350);
+  ctx.fillText(`${localStorage.getItem('flappyHighScore') || 0}`, CANVAS_WIDTH / 2, 350);
   ctx.restore();
 
   ctx.save();
